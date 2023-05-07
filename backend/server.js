@@ -1,18 +1,48 @@
-const express = require('express');
+const express = require("express");
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const dotenv = require("dotenv");
+
 const app = express();
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const mongoose = require('mongoose');
-const PORT = 4000;
+dotenv.config();
+
+const PORT = process.env.PORT || 8090;
+
 app.use(cors());
-
 app.use(bodyParser.json());
+app.use(express.json());
 
-mongoose.connect('mongodb+srv://af-project:xZNpeXRXSDd62rFl@af.dw8mxxg.mongodb.net/test', { useNewUrlParser: true });
-const connection = mongoose.connection;
-connection.once('open', function() {
-    console.log("MongoDB database connection established successfully");
+const URL = process.env.MONGODB_URL;
+
+mongoose.connect(URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 })
-app.listen(PORT, function() {
-    console.log("Server is running on Port: " + PORT);
+  .then(() => {
+    console.log('MongoDB database connection established successfully');
+    return mongoose.connection.createIndexes();
+  })
+  .catch((err) => {
+    //console.log('Error connecting to MongoDB:', err);
+  });
+
+const connection = mongoose.connection;
+connection.once("open", () => {
+  console.log("Mongo DB connection successfully!");
+});
+
+
+
+const insurance = require('./routes/insurance');
+const vehicle = require('./routes/vehicle');
+
+
+
+app.use('/insurance', insurance);
+app.use('/vehicle', vehicle);
+
+
+app.listen(PORT, () => {
+  console.log(`Server is up and running on port number ${PORT}`);
 });
