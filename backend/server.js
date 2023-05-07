@@ -5,7 +5,9 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const PORT = 4000;
 app.use(cors());
+
 app.use(bodyParser.json());
+
 mongoose.connect('mongodb+srv://af-project:xZNpeXRXSDd62rFl@af.dw8mxxg.mongodb.net/test', { useNewUrlParser: true });
 const connection = mongoose.connection;
 connection.once('open', function() {
