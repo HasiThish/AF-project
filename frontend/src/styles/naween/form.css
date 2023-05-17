@@ -1,0 +1,179 @@
+
+.b-image{
+
+    display: flex;
+    width: 420px;
+    height:620px;
+    left: 120px;
+    top:125px;
+    border-radius: 50px;
+    backdrop-filter: blur(30px);
+    box-shadow: 10px 10px 80px rgba(0, 0, 0, 0.751);
+    color:rgb(0, 0, 0);
+    position: absolute;
+    background-image: url("../../images/naween/123.jpg");
+    background-size: cover;
+  
+   }
+   .b-imageV{
+
+    display: flex;
+    width: 420px;
+    height:620px;
+    left: 120px;
+    top:85px;
+    border-radius: 50px;
+    backdrop-filter: blur(30px);
+    box-shadow: 10px 10px 80px rgba(0, 0, 0, 0.751);
+    color:rgb(0, 0, 0);
+    position: absolute;
+    background-image: url("../../images/naween/321.jpg");
+    background-size: cover;
+  
+   }
+  .Stylist-selct{
+    position: absolute;
+    height: 45px;
+    width: 680px;
+    left: 0px;
+    top: 30px;
+    color: #00000077;
+    font-size: 14px;
+    color: black;
+    background: rgba(255, 253, 253, 0.424);
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    border-radius: 7px;
+    
+  }
+  .container01{
+    position: absolute;
+    height: 840px;
+    right: 120px;
+    top: 125px; 
+    width: 800px;
+    border: solid 2px red;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 10px 20px rgba(0, 10, 10, 0.551);
+    border:solid 2px rgba(253, 253, 253, 0);
+    color:white;
+  
+   
+     }
+  .container{
+    position: absolute;
+    height: 640px;
+    right: 120px;
+    top: 75px; 
+    width: 800px;
+    border: solid 2px red;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 10px 20px rgba(0, 10, 10, 0.551);
+    border:solid 2px rgba(253, 253, 253, 0);
+    color:white;
+  
+   
+     }
+    .form-floating{
+      position: relative;
+      left: 40px;
+      top: 20px;
+      font-style: normal;
+      width: 300px;
+      font-weight: 900;
+      font-size: 15px; 
+      color: #080663;
+    }
+     .form-floating3{
+      position: relative;
+      left: 40px;
+      top: 20px;
+      font-style: normal;
+      width: 300px;
+      font-weight: 900;
+      font-size: 15px; 
+      color: #080663;
+    }
+    .form-floating2{
+      position: relative;
+      left: 40px;
+      top: 20px;
+      font-style: normal;
+      width: 300px;
+      font-weight: 900;
+      font-size: 15px; 
+      color: #691111;
+    }
+    .form-control{
+      height: 45px;
+      width: 680px;
+      font-weight: 500;
+      color: black;
+      background: rgba(255, 253, 253, 0.424);
+      border: 1px solid rgba(0, 0, 0, 0.13);
+      border-radius: 7px;
+    }
+    .form-control::placeholder {
+      color: #00000077;
+      font-style: italic;
+      font-size: 14px;
+    }
+    .dropdown{
+      bottom:15px;
+      position: relative;
+      left: 40px;
+      top: 18px;
+    }
+    .btnsubmit{
+      font-style: normal;
+      font-weight: 600;
+      font-size: 15px;
+      color: #FFFFFF;
+      position: absolute;
+      height: 45px;
+      width: 680px;
+      left: 55px;
+      top: 675px;
+      bottom: 0px; 
+      padding: 2px;
+      background:#080663;
+      border-color: #dba5ba00;
+      border-radius: 10px;
+    }
+    .btnsubmit2{
+      font-style: normal;
+      font-weight: 600;
+      font-size: 15px;
+      color: #FFFFFF;
+      position: absolute;
+      height: 45px;
+      width: 680px;
+      left: 55px;
+      top: 590px;
+      bottom: 0px; 
+      padding: 2px;
+      background:#691111;
+      border-color: #dba5ba00;
+      border-radius: 10px;
+    }
+    .btnsubmit3{
+      font-style: normal;
+      font-weight: 600;
+      font-size: 15px;
+      color: #FFFFFF;
+      position: absolute;
+      height: 45px;
+      width: 680px;
+      left: 55px;
+      top: 750px;
+      bottom: 0px; 
+      padding: 2px;
+      background:#080663;
+      border-color: #dba5ba00;
+      border-radius: 10px;
+    }
+    @media screen and (max-width: 600px) {
+     
+    }
+      

@@ -1,0 +1,78 @@
+
+
+   .insurence-list {
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px auto;
+    border-radius: 8px;
+    padding: 16px;
+    
+  
+  }
+  .text-field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 16px;
+    font-weight: 900;
+  }
+  
+  .insurence-card {
+    background-color: #f8f8f8;
+    border-radius: 50px;
+    
+    width: 600px;
+    height: 400px;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.751);
+  }
+  
+  .insurence-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .insurence-card p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .card-btn{
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    color: #FFFFFF;
+    position: absolute;
+    height: 45px;
+    width: 680px;
+    left: 55px;
+    top: 675px;
+    bottom: 0px; 
+    padding: 2px;
+    background:#080663;
+    border-color: #dba5ba00;
+    border-radius: 10px;
+  }
+  .request-button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .selected{
+    color: rgb(0, 250, 0);
+    box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.751);
+    font-size: medium;
+  }
