@@ -1,0 +1,11 @@
+.dashboard-container001 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("../../images/naween/logo.png");
+    background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  
+  }

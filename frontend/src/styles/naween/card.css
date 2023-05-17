@@ -1,0 +1,51 @@
+
+
+   .insurence-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px auto;
+  }
+  
+  .insurence-card {
+    background-color: #bbbbb9;
+    border-radius: 50px;
+    box-shadow: 2px 10px 30px rgba(0,0,0,0.15);
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .insurence-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .insurence-card p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .card-btn{
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    color: #FFFFFF;
+    position: absolute;
+    height: 45px;
+    width: 680px;
+    left: 55px;
+    top: 675px;
+    bottom: 0px; 
+    padding: 2px;
+    background:#080663;
+    border-color: #dba5ba00;
+    border-radius: 10px;
+  }
