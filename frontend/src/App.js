@@ -21,6 +21,13 @@ import UserList from './pages/adminPages/UserList';
 import CreateAdminForm from './pages/adminPages/Add_Admin';
 import EditForm from './pages/adminPages/EditUserDetails';
 
+//Hotel components
+import HotelForm from './pages/adminPages/Add_hotels';
+import HotelList from './pages/adminPages/Hotel_list';
+import EditHotelForm from './pages/adminPages/Edit_Hotel';
+import HotelsGrid from './pages/userPages/HotelsGrid';
+import HotelDetail from './pages/userPages/HotelDetail';
+
 function App() {
 
   const [authenticated, setAuthenticated] = React.useState(false); // add state to keep track of authentication status
@@ -40,6 +47,12 @@ function App() {
         <Route path='/places/:id' element={<PlaceDetails/>}/>
         <Route path='/heritagelist' element={<HeritageList/>}/>
         <Route path='/editPlace/:id' element={<EditPlaceForm/>}/>
+
+        <Route path='/addhotel' element={<HotelForm/>}/>
+        <Route path='/hotelList' element={<HotelList/>}/>
+        <Route path='/edithotel/:id' element={<EditHotelForm/>}/>
+        <Route path='/hotelsgrid' element={<HotelsGrid/>}/>
+        <Route path='/hoteldetail/:id' element={<HotelDetail/>}/>
 
         {/*users component(admin & user)*/}
         <Route path='/adminHome' element={<AdminHome/>}/>
