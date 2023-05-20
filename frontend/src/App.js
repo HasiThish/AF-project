@@ -19,6 +19,7 @@ import AddVehicle from './pages/naween/admin/vehicle';
 import InsurenceListAdmin from './pages/naween/admin/insurenceListAdmin';
 import AddInsurence from './pages/naween/admin/addInsurence';
 import ApprovedInsurances from './pages/naween/admin/approvedInsurances';
+import WeatherMap from './pages/naween/weather';
 
 function App() {
 
@@ -45,7 +46,7 @@ function App() {
         <Route path='/insurence-list-admin' element={<InsurenceListAdmin/>}/>
         <Route path='/add-insurence' element={<AddInsurence/>}/>
         <Route path='/approved-insurence' element={<ApprovedInsurances/>}/>
-
+        <Route path='/weather' element={<WeatherMap/>}/>
 
       </Routes>
     </Router>

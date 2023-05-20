@@ -24,6 +24,7 @@ function Header() {
               <li><a href="#">About</a></li>
               <li><a href="#">Discover</a></li>
               <li><a href="#">Contact</a></li>
+              <li><a href="/weather">Map</a></li>
             </ul>
           </nav>
         </div>

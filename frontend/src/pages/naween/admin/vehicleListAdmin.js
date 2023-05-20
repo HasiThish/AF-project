@@ -16,18 +16,68 @@ function VehicleListAdmin() {
   }, []);
 
   
-  function handleDeleteVehicle(id) {
-    
-    //Vehicle
-      
-      axios.delete(`http://localhost:8090/vehicle/${id}`).then(() => {
+  // function handleDeleteVehicle(id) {
+  //     axios.delete(`http://localhost:8090/vehicle/${id}`).then(() => {
         
+  //       const updatedVehicle = vehicles.filter((vehicle) => vehicle._id !== id);
+  //       setinvehicles(updatedVehicle);
+  //        });
+  //  }
+  function handleDeleteVehicle(id) {
+    const alertDiv = document.createElement("div");
+    alertDiv.style.position = "fixed";
+    alertDiv.style.top = "50%";
+    alertDiv.style.left = "50%";
+    alertDiv.style.transform = "translate(-50%, -50%)";
+    alertDiv.style.padding = "1em";
+    alertDiv.style.background = "#333";
+    alertDiv.style.color = "white";
+    alertDiv.style.fontWeight = "bold";
+    alertDiv.style.textAlign = "center";
+    alertDiv.style.border = "2px solid black";
+    alertDiv.style.borderRadius = "10px";
+    alertDiv.style.boxShadow = "0px 0px 10px rgba(0, 0, 0, 0.5)";
+    alertDiv.innerHTML = `
+      <p>Are you sure you want to delete this vehicle?</p>
+      <button id="delete-yes" style="background-color: red; color: white; margin-right: 1em;">Yes</button>
+      <button id="delete-no" style="background-color: green; color: white;">No</button>
+    `;
+    document.body.appendChild(alertDiv);
+  
+    document.getElementById("delete-yes").addEventListener("click", () => {
+      axios.delete(`http://localhost:8090/vehicle/${id}`).then(() => {
         const updatedVehicle = vehicles.filter((vehicle) => vehicle._id !== id);
         setinvehicles(updatedVehicle);
-        
+  
+        const successAlert = document.createElement("div");
+        successAlert.innerText = "Vehicle deleted!";
+        successAlert.style.position = "fixed";
+        successAlert.style.top = "50%";
+        successAlert.style.left = "50%";
+        successAlert.style.transform = "translate(-50%, -50%)";
+        successAlert.style.padding = "1em";
+        successAlert.style.background = "#333";
+        successAlert.style.color = "white";
+        successAlert.style.fontWeight = "bold";
+        successAlert.style.textAlign = "center";
+        successAlert.style.borderRadius = "10px";
+        successAlert.style.boxShadow = "0px 0px 10px rgba(0, 0, 0, 0.5)";
+        document.body.appendChild(successAlert);
+  
+        setTimeout(() => {
+          successAlert.remove();
+        }, 1000);
       });
-    
+  
+      alertDiv.remove();
+    });
+  
+    document.getElementById("delete-no").addEventListener("click", () => {
+      alertDiv.remove();
+    });
   }
+  
+
   function handleClickAddVehicle() {
     window.location.href = "/add-vehcile";
     

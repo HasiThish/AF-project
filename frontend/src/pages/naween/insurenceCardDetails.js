@@ -51,11 +51,11 @@ function InsurenceCardDetails({ insurence }) {
       <p>Terms and Conditions: {insurence.termsAndCond}</p>  */}
       <div className="container">
       
-      <h3 >{insurence.insurenceName}</h3>
+      <h3 style={{ fontWeight: 'bold', marginBottom: '5px', color: 'black' }}>{insurence.insurenceName}</h3>
       
       <label 
-      style={{ fontWeight: 'bold', marginBottom: '5px' }}
-      htmlFor="name">Enter Name:</label><br/>
+      style={{ fontWeight: 'bold', marginBottom: '5px', color: 'black' }}
+      htmlFor="name" >Enter Name:</label><br/>
       <input placeholder="enter your name"
       style={{
         height: '30px',
@@ -70,7 +70,7 @@ function InsurenceCardDetails({ insurence }) {
       type="text" id="name" value={name} onChange={handleNameChange} />
 
       <label 
-      style={{ fontWeight: 'bold', marginBottom: '5px' }}
+      style={{ fontWeight: 'bold', marginBottom: '5px', color: 'black'  }}
       htmlFor="mobile">Enter Mobile:</label>
       <input placeholder="enter your contact number"
       style={{
@@ -86,7 +86,7 @@ function InsurenceCardDetails({ insurence }) {
       type="number" id="mobile" value={mobile} onChange={handleMobileChange} />
 
       <label 
-      style={{ fontWeight: 'bold', marginBottom: '5px' }}
+      style={{ fontWeight: 'bold', marginBottom: '5px', color: 'black'  }}
       htmlFor="email">Enter email:</label>
       <input placeholder="enter your email address"
       style={{
