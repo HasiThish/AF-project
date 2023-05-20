@@ -6,6 +6,7 @@ import user from '../images/user.png'
 function Header() {
   const [authenticated, setAuthenticated] = useState(true); // add state to keep track of authentication status
 
+  
   const handleLogout = () => {
     setAuthenticated(false); // set authentication status to false on logout
   };
@@ -23,6 +24,7 @@ function Header() {
               <li><a href={'/'}>Home</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">Discover</a></li>
+              <li><a href={'/hotelsgrid'}>Hotels</a></li>
               <li><a href="#">Contact</a></li>
             </ul>
           </nav>
