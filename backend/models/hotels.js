@@ -11,23 +11,23 @@ const HotelSchema = new mongoose.Schema({
   },
   description: {
     type: String,
-    required: false
+    required: true
   },
   phone: {
     type: String,
-    required: false
+    required: true
   },
   rating: {
     type: String,
-    required: false
+    required: true
   },
   price_start: {
     type: String,
-    required: false
+    required: true
   },
   price_end: {
     type: String,
-    required: false
+    required: true
   },
 })
 

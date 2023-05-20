@@ -26,6 +26,32 @@ function HotelForm() {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    // Check for empty fields
+    if (
+      name.trim() === "" ||
+      location.trim() === "" ||
+      description.trim() === "" ||
+      phone.trim() === "" ||
+      rating.trim() === "" ||
+      price_start.trim() === "" ||
+      price_end.trim() === ""
+    ) {
+      alert("Please fill in all the fields.");
+      return;
+    }
+
+    // Mobile number validation
+    const mobileNumberPattern = /^\d{10}$/;
+    if (!mobileNumberPattern.test(phone)) {
+      alert("Invalid mobile number. Please enter a 10-digit mobile number.");
+      return;
+    }
+
+    // End price validation
+    if (parseInt(price_end) <= parseInt(price_start)) {
+      alert("Ending price must be greater than the starting price.");
+      return;
+    }
 
     const data = {
       name: name,
@@ -36,7 +62,7 @@ function HotelForm() {
       price_start: price_start,
       price_end: price_end,
     };
-//add api call
+    //add api call
     fetch("http://localhost:4000/api/hotels", {
       method: "POST",
       headers: {
@@ -57,6 +83,9 @@ function HotelForm() {
         setRating("");
         setPrice_start("");
         setPrice_end("");
+
+        // Navigate to HotelList
+        window.location.href = "/hotelList";
       })
       .catch((error) => {
         console.error("Error adding Hotel:", error);
@@ -106,6 +135,7 @@ function HotelForm() {
                 value={description}
                 onChange={handleInputChange}
                 placeholder="Enter Description"
+                required
               />
             </div>
             <div className="form-group">
@@ -118,7 +148,8 @@ function HotelForm() {
                 onChange={handleInputChange}
                 placeholder="   Enter Contact Number"
                 className="form-input input-custom"
-                />
+                required
+              />
             </div>
             <div className="form-row">
               <div className="form-group">
@@ -128,6 +159,7 @@ function HotelForm() {
                   name="rating"
                   value={rating}
                   onChange={handleInputChange}
+                  required
                 >
                   <option value="">Select Rating</option>
                   <option value="1">1</option>
@@ -149,6 +181,7 @@ function HotelForm() {
                   onChange={handleInputChange}
                   placeholder="   Enter Starting Price"
                   className="form-input input-custom"
+                  required
                 />
               </div>
               <div className="form-group">
@@ -161,10 +194,12 @@ function HotelForm() {
                   onChange={handleInputChange}
                   placeholder="   Enter Ending Price"
                   className="form-input input-custom"
+                  required
                 />
               </div>
             </div>
-            <br /><br />
+            <br />
+            <br />
             <button type="submit" className="submit">
               Submit
             </button>
