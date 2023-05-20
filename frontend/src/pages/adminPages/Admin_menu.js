@@ -5,8 +5,6 @@ import "../admin_menubar.css";
 function VerticalMenu() {
   const location = useLocation();
 
-  const location = useLocation();
-
   return (
     <ul className="menu">
       <li>
