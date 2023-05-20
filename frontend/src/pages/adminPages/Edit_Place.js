@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
+import AdminMenu from './Admin_menu'
 
 const EditPlaceForm = () => {
     const { id } = useParams();
@@ -75,7 +76,14 @@ const EditPlaceForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div>
+      <AdminMenu/>
+      <div className='adminContainer'>
+        <h1>Edit Place Details</h1>
+        <div class='container'>
+      <form onSubmit={handleSubmit}>
+      <div class='row'>
+      <div className='col-25'>
       <label htmlFor="title">Title:</label>
       <input
         type="text"
@@ -112,49 +120,57 @@ const EditPlaceForm = () => {
         value={description3}
         onChange={(e) => setDescription3(e.target.value)}
       ></textarea>
+      </div>
 
+      <div className='col-75'>
       <label htmlFor="image1">Image 1:</label>
       {prevImage1 && (
-        <img src={prevImage1} alt="Previous Image" style={{ width: '200px' }} />
+        <img src={`http://localhost:4000/api/places${prevImage1}`} alt="Previous Image" style={{ width: '200px' }} />
       )}
       <input
         type="file"
         id="image1"
         onChange={(e) => setImage1(e.target.files[0])}
-      />
+      /><br/>
 
       <label htmlFor="image2">Image 2:</label>
       {prevImage2 && (
-        <img src={prevImage2} alt="Previous Image" style={{ width: '200px' }} />
+        <img src={`http://localhost:4000/api/places${prevImage2}`} alt="Previous Image" style={{ width: '200px' }} />
       )}
       <input
         type="file"
         id="image2"
         onChange={(e) => setImage2(e.target.files[0])}
-      />
+      /><br/>
 
       <label htmlFor="image3">Image 3:</label>
       {prevImage3 && (
-        <img src={prevImage3} alt="Previous Image" style={{ width: '200px' }} />
+        <img src={`http://localhost:4000/api/places${prevImage3}`} alt="Previous Image" style={{ width: '200px' }} />
       )}
       <input
         type="file"
         id="image3"
         onChange={(e) => setImage3(e.target.files[0])}
-      />
+      /><br/>
 
       <label htmlFor="image4">Image 4:</label>
       {prevImage4 && (
-        <img src={prevImage4} alt="Previous Image" style={{ width: '200px' }} />
+        <img src={`http://localhost:4000/api/places${prevImage4}`} alt="Previous Image" style={{ width: '200px' }} />
       )}
       <input
         type="file"
         id="image4"
         onChange={(e) => setImage4(e.target.files[0])}
       />
+      </div><br/>
+
+      </div>
 <br/><br/>
-      <button type="submit">Update Place</button>
+      <button type="submit" className='submit'>Update Place</button>
     </form>
+    </div>
+      </div>
+    </div>
   );
 };
 

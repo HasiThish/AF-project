@@ -54,7 +54,6 @@ const UserList = () => {
                     <th>Last Name</th>
                     <th>Last Name</th>
                     <th>Email</th>
-                    <th>Password</th>
                     <th>Role</th>
                     <th>Action</th>
                 </tr>
@@ -65,7 +64,6 @@ const UserList = () => {
                         <td>{user.lname}</td>
                         <td>{user.nic}</td>
                         <td>{user.email}</td>
-                        <td>{user.password}</td>
                         <td>{user.role}</td>
                         <td>
                             <a href={`/edit/${user._id}`}><button ><img src={Edit} alt="Website Logo" style={{height:'30px', width:'30px'}} />   </button></a>

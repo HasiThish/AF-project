@@ -51,6 +51,8 @@ const EditForm = () => {
     }
   };
 
+  const isUserRole = userData.role === 'user';
+
   return (
     <div>
         <AdminMenu/>
@@ -74,11 +76,14 @@ const EditForm = () => {
           <label htmlFor="email">Email:</label>
           <input type="email" name="email" value={userData.email} onChange={handleChange} />
         </div>
+        {!isUserRole && ( // Render password input only if the role is not 'user'
+              <div>
+                <label htmlFor="password">Password:</label>
+                <input type="password" name="password" value={userData.password} onChange={handleChange} />
+              </div>
+            )}
         <div>
-          <label htmlFor="password">Password:</label>
-          <input type="password" name="password" value={userData.password} onChange={handleChange} />
-        </div>
-        <div>
+
         <label htmlFor="password">Role:</label>
           <input type="text" name="role" value={userData.role}  disabled/>
         </div><br/><br/>
