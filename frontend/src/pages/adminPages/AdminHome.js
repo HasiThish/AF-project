@@ -1,7 +1,7 @@
 import React from 'react';
 import AdminMenu from './Admin_menu'
-import '../styles/admin.css'
-import HeritagePlaces from './view_places';
+import '../admin.css'
+import HeritagePlaces from '../userPages/view_places';
 
 function AdminHome({ handleLogout }) {
   return (

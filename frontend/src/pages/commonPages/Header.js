@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/header.css';
+import '../header.css';
 import logo from '../images/logo.jpeg';
 import user from '../images/user.png'
 
@@ -39,7 +39,7 @@ function Header() {
           ) : ( // display signin and signup buttons if not authenticated
             <>
               <a href={'/home'}><button className="signin-btn">Sign In</button></a>
-              <button className="signup-btn">Sign Up</button>
+              <a href={'/signup'}><button className="signup-btn">Sign Up</button></a>
             </>
           )}
         </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter, useNavigate } from 'react-router-dom';
-import '../styles/login.css'
+import '../login.css'
 
 function Login({ handleLogin }) { // add setAuthenticated as a prop
   const [email, setEmail] = useState('');
@@ -16,7 +16,7 @@ function Login({ handleLogin }) { // add setAuthenticated as a prop
   };
 
   return (
-    <div className="login-container">
+    <div className="container">
         <form onSubmit={handleSubmit}className='form1'>
           <h1>Log In Here!</h1>
           <div className="form-group">
@@ -26,8 +26,8 @@ function Login({ handleLogin }) { // add setAuthenticated as a prop
           <div className="form-group">
             <label>Password:</label>
             <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-          </div>
-          <button type="submit" className='login'>Login</button>
+          </div><br/><br/>
+          <button type="submit" className='submit'>Login</button>
         </form>
       </div>
   );

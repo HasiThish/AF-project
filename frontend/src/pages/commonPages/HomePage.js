@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Login from './Login';
-import AdminHome from './AdminHome';
-import UserHome from './UserHome';
-import HeritagePlaces from './view_places';
+import AdminHome from '../adminPages/AdminHome';
+import UserHome from '../userPages/UserHome';
 
 function HomePage() {
   const [role, setRole] = useState('');

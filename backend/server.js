@@ -17,7 +17,7 @@ app.use(cors());
 
 app.use(bodyParser.json());
 
-app.use(heritagesRoutes);
+app.use('/api/places',heritagesRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
 
