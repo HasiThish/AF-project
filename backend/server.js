@@ -10,6 +10,8 @@ const heritagesRoutes = require('./routes/heritages_routes');
 const userRoutes = require('./routes/user');
 const authRoutes = require('./routes/auth');
 const hotelRoutes = require('./routes/hotel_routes');
+const restaurantsRoutes = require('./routes/restaurants_routes');
+
 
 app.use(cors());
 
@@ -19,6 +21,7 @@ app.use('/api/places',heritagesRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/hotels', hotelRoutes);
+app.use('/api/restaurants',restaurantsRoutes); 
 
 mongoose.connect('mongodb+srv://af-project:RmTMTlQYIMrIvgjF@af.dw8mxxg.mongodb.net/test', { useNewUrlParser: true });
 
