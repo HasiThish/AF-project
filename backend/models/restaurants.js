@@ -24,6 +24,9 @@ const restaurantSchema = new mongoose.Schema({
     res_city:{
         type:String,
         required:true
+    },
+    res_booking:{
+        type:Number
     }
 
 });

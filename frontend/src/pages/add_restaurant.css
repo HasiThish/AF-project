@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .space-20 {
+    display: inline-block;
+    width: 20px; /* Adjust the width as needed for your desired spacing */
+  }
+  .space-30 {
+    display: inline-block;
+    width: 30px; /* Adjust the width as needed for your desired spacing */
+  }
+  .space-40 {
+    display: inline-block;
+    width: 40px; /* Adjust the width as needed for your desired spacing */
+  }
+  .space-50 {
+    display: inline-block;
+    width: 50px; /* Adjust the width as needed for your desired spacing */
+  }
+  .space-60 {
+    display: inline-block;
+    width: 60px; /* Adjust the width as needed for your desired spacing */
+  }
+
+  input[type=text],input[type=password],input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+  }
+  
+  label {
+    padding: 12px 12px 12px 12px;
+    display: inline-block;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    font-family: Arial, sans-serif;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 700px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  
+  .drop-zone {
+    border: 2px dashed #6eb5ff;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    color: #6eb5ff;
+    background-color: #f5f5f5;
+  }
+  
+  .dragging {
+    background-color: #6eb5ff;
+    color: #fff;
+  }
+  
+  .img-container {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .img-container img {
+    max-width: 200px;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 3px 6px;
+    background-color: #6eb5ff;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  .submit{
+    background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-right: 10px;
+      width:100%
+  }
+  
