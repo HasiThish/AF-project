@@ -12,6 +12,8 @@ import AddHeritagePlaceForm from './pages/adminPages/Add_heritage_details';
 import HeritageList from './pages/adminPages/heritages_list';
 import PlaceDetails from './pages/userPages/place';
 import EditPlaceForm from './pages/adminPages/Edit_Place';
+import RestaurantSearchPage from './pages/commonPages/RestaurantSearchPage';
+import RestaurantList from './pages/adminPages/restaurants_list';
 
 //users component(admin & user)
 import AdminHome from './pages/adminPages/AdminHome';
@@ -40,6 +42,8 @@ function App() {
         <Route path='/places/:id' element={<PlaceDetails/>}/>
         <Route path='/heritagelist' element={<HeritageList/>}/>
         <Route path='/editPlace/:id' element={<EditPlaceForm/>}/>
+        <Route path='/restaurantsearchpage' element={<RestaurantSearchPage/>}/>
+        <Route path='/restaurantlist' element={<RestaurantList/>}/>
 
         {/*users component(admin & user)*/}
         <Route path='/adminHome' element={<AdminHome/>}/>
