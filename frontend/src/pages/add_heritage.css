@@ -109,3 +109,9 @@ input[type=submit]:hover {
     margin-right: 10px;
     width:100%
 }
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}

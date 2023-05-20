@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import '../header.css';
 import logo from '../images/logo.jpeg';
-import user from '../images/user.png'
+import user from '../images/user.png';
+import { useLocation } from 'react-router-dom';
 
 function Header() {
   const [authenticated, setAuthenticated] = useState(true); // add state to keep track of authentication status
+  const location = useLocation();
 
   
   const handleLogout = () => {
@@ -21,7 +23,7 @@ function Header() {
         <div className="menu-container">
           <nav>
             <ul>
-              <li><a href={'/'}>Home</a></li>
+              <li><a href={'/'} className={location.pathname === '/' ? 'active' : ''}>Home</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">Discover</a></li>
               <li><a href={'/hotelsgrid'}>Hotels</a></li>
@@ -33,9 +35,11 @@ function Header() {
           {authenticated ? ( // display logout button if authenticated
             <>
               <button className="signin-btn" onClick={handleLogout}>Sign Out</button>
+              <a href={'/adminHome'}>
               <div className="profile-container">
                 <img src={user} alt="Profile Image" />
               </div>
+              </a>
             </>
           ) : ( // display signin and signup buttons if not authenticated
             <>
