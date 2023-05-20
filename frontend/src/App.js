@@ -27,6 +27,8 @@ import HotelList from './pages/adminPages/Hotel_list';
 import EditHotelForm from './pages/adminPages/Edit_Hotel';
 import HotelsGrid from './pages/userPages/HotelsGrid';
 import HotelDetail from './pages/userPages/HotelDetail';
+import BookingAdd from './pages/userPages/BookingAdd';
+import BookingsList from './pages/userPages/BookingsList';
 
 function App() {
 
@@ -61,6 +63,9 @@ function App() {
         <Route path='/users' element={<UserList/>}/>
         <Route path='/addadmin' element={<CreateAdminForm/>}/>
         <Route path='/edit/:id' element={<EditForm/>}/>
+        
+        <Route path='/bookings/:id' element={<BookingAdd/>}/>
+        <Route path='/bookingslist' element={<BookingsList/>}/>
         
       </Routes>
     </Router>

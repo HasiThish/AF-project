@@ -26,6 +26,7 @@ function Header() {
               <li><a href="#">Discover</a></li>
               <li><a href={'/hotelsgrid'}>Hotels</a></li>
               <li><a href="#">Contact</a></li>
+              <li><a href={'/bookingslist'}>Reservations</a></li>
             </ul>
           </nav>
         </div>

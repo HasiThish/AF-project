@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FaStar } from 'react-icons/fa';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../viewplaces.css';
 
 const HotelDetail = () => {
@@ -60,6 +61,11 @@ const HotelDetail = () => {
           <p>Description : </p>
           <p className="card-description">{hotel.description}</p>
         </div>
+      </div>
+      <div className="bookings-button">
+      <Link to={`/bookings/${hotel._id}`} className="btn btn-primary">
+          Make a Reservation
+        </Link>
       </div>
     </div>
   );
