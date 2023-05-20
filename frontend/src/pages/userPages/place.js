@@ -44,7 +44,7 @@ const PlaceDetails = () => {
             <hr />
             <div className="image-container">
               <img
-                src={`http://localhost:4000/api/images${heritagePlaces.imagePath2}`}
+                src={`http://localhost:4000/api/places${heritagePlaces.imagePath2}`}
                 alt={heritagePlaces.filename2}
                 className="image"
               />
@@ -52,7 +52,7 @@ const PlaceDetails = () => {
             </div>
             <div className="image-container">
               <img
-                src={`http://localhost:4000/api/images${heritagePlaces.imagePath3}`}
+                src={`http://localhost:4000/api/places${heritagePlaces.imagePath3}`}
                 alt={heritagePlaces.filename3}
                 className="image"
               />
@@ -60,7 +60,7 @@ const PlaceDetails = () => {
             </div>
             <div className="image-container">
               <img
-                src={`http://localhost:4000/api/images${heritagePlaces.imagePath4}`}
+                src={`http://localhost:4000/api/places${heritagePlaces.imagePath4}`}
                 alt={heritagePlaces.filename4}
                 className="image"
               />
@@ -79,7 +79,7 @@ const PlaceDetails = () => {
                   <div class="row">
                     <div className="card">
                       <img
-                        src={`http://localhost:4000/api/images${place.imagePath1}`}
+                        src={`http://localhost:4000/api/places${place.imagePath1}`}
                         alt={place.filename1}
                         className="card-image"
                       />

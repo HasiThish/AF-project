@@ -31,7 +31,7 @@ const HeritagePlaces = () => {
                     <div class="column">
                         <div className="card">
                             <img
-                                src={`http://localhost:4000/api/images${place.imagePath1}`}
+                                src={`http://localhost:4000/api/places${place.imagePath1}`}
                                 alt={place.filename1}
                                 className="card-image"
                             />
